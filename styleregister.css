@@ -1,0 +1,143 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background utama dengan efek aurora */
+body {
+    background: linear-gradient(180deg, #98ffb2, #22cca2, #37a140);
+    background-size: 400% 400%;
+    animation: aurora 10s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Efek animasi aurora */
+@keyframes aurora {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Container utama register */
+.register-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Judul register */
+h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Input untuk form register */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Placeholder warna putih transparan */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Efek glow saat input aktif */
+input:focus {
+    border-color: #00ffea;
+    outline: none;
+    box-shadow: 0 0 10px #0099ff;
+}
+
+/* Tombol register */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    border: none;
+    color: black;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Efek hover tombol */
+button:hover {
+    background: linear-gradient(90deg, #ffffff, #6fffff);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+/* Teks di bawah form */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Link login */
+p a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efek hover pada link */
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Pesan error */
+.error-message {
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Efek animasi fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek animasi saat error */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
